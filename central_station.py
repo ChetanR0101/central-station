@@ -2,8 +2,6 @@ from email.policy import default
 from xmlrpc.client import Boolean
 from odoo import models,fields,api
 from odoo.exceptions import ValidationError
-from odoo.tools.misc import babel_locale_parse
-
 
 class CentralStation_substation(models.Model):
     _name= "central.substation"
