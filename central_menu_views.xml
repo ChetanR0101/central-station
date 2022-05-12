@@ -92,13 +92,13 @@
             </record>
 
 
-<!-- Transections -->
+<!-- Transactions -->
             
 
-    <!-- Transection in Action  -->
-    <record id="transection_in_action" model="ir.actions.act_window">
-        <field name="name">Transection In Action</field>
-        <field name="res_model">central.transection_in</field>
+    <!-- Transaction in Action  -->
+    <record id="transaction_in_action" model="ir.actions.act_window">
+        <field name="name">Transaction In Action</field>
+        <field name="res_model">central.transaction_in</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">
             <p>
@@ -108,12 +108,12 @@
     </record>
 
 
-        <!-- transection_in Search View -->
-        <record id="transection_in_view_search" model="ir.ui.view">
-            <field name="name">central.transection_in.view.search</field>
-            <field name="model">central.transection_in</field>
+        <!-- transaction_in Search View -->
+        <record id="transaction_in_view_search" model="ir.ui.view">
+            <field name="name">central.transaction_in.view.search</field>
+            <field name="model">central.transaction_in</field>
             <field name="arch" type="xml">
-                <search string="Transection In Search View">
+                <search string="Transaction In Search View">
 
                     <filter string="Current Day" name="current_day"
                     domain="[('date','&gt;',context_today().strftime('%Y-%m-%d 00:00:00')),
@@ -148,12 +148,12 @@
         </record>
         
 
-        <!-- Transection In tree view -->
-        <record id="transection_in_view_tree" model="ir.ui.view">
-            <field name="name">central.transection_in.view.tree</field>
-            <field name="model">central.transection_in</field>
+        <!-- Transaction In tree view -->
+        <record id="transaction_in_view_tree" model="ir.ui.view">
+            <field name="name">central.transaction_in.view.tree</field>
+            <field name="model">central.transaction_in</field>
             <field name="arch" type="xml">
-                <tree string="Transesction In Tree View">
+                <tree string="Transaction In Tree View">
                     <field name="sub_station" />
                     <field name="name" />
                     <field name="date" />
@@ -163,12 +163,12 @@
             </field>
         </record>
 
-        <!-- Transection In Form View -->
-        <record id="transection_in_view_form" model="ir.ui.view">
-            <field name="name">central.transection_in.view.form</field>
-            <field name="model">central.transection_in</field>
+        <!-- Transaction In Form View -->
+        <record id="transaction_in_view_form" model="ir.ui.view">
+            <field name="name">central.transaction_in.view.form</field>
+            <field name="model">central.transaction_in</field>
             <field name="arch" type="xml">
-                <form string="Transection in Form View">
+                <form string="Transaction in Form View">
                     <sheet>
                         <group>
                             <field name="sub_station" />
@@ -185,10 +185,10 @@
 
 
 
-    <!-- Transection out Action  -->
-    <record id="transection_out_action" model="ir.actions.act_window">
-        <field name="name">Transection Out Action</field>
-        <field name="res_model">central.transection_out</field>
+    <!-- Transaction out Action  -->
+    <record id="transaction_out_action" model="ir.actions.act_window">
+        <field name="name">Transaction Out Action</field>
+        <field name="res_model">central.transaction_out</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">
             <p>
@@ -198,12 +198,12 @@
     </record>
 
 
-        <!-- Transection out Search View -->
-        <record id="transection_out_view_search" model="ir.ui.view">
-            <field name="name">central.transection_out.view.search</field>
-            <field name="model">central.transection_out</field>
+        <!-- Transaction out Search View -->
+        <record id="transaction_out_view_search" model="ir.ui.view">
+            <field name="name">central.transaction_out.view.search</field>
+            <field name="model">central.transaction_out</field>
             <field name="arch" type="xml">
-                <search string="Transection Out Search View">
+                <search string="Transaction Out Search View">
 
                     <filter string="Current Day" name="current_day"
                     domain="[('date','&gt;',context_today().strftime('%Y-%m-%d 00:00:00')),
@@ -237,10 +237,10 @@
         </record>
         
 
-        <!-- Transection Out tree view -->
-        <record id="transection_out_view_tree" model="ir.ui.view">
-            <field name="name">central.transection_out.view.tree</field>
-            <field name="model">central.transection_out</field>
+        <!-- Transaction Out tree view -->
+        <record id="transaction_out_view_tree" model="ir.ui.view">
+            <field name="name">central.transaction_out.view.tree</field>
+            <field name="model">central.transaction_out</field>
             <field name="arch" type="xml">
                 <tree string="Transesction Out Tree View">
                     <field name="sub_station" />
@@ -255,12 +255,12 @@
         </record>
         
 
-        <!-- Transection Out Form View -->
-        <record id="transection_out_view_form" model="ir.ui.view">
-            <field name="name">central.transection_out.view.form</field>
-            <field name="model">central.transection_out</field>
+        <!-- Transaction Out Form View -->
+        <record id="transaction_out_view_form" model="ir.ui.view">
+            <field name="name">central.transaction_out.view.form</field>
+            <field name="model">central.transaction_out</field>
             <field name="arch" type="xml">
-                <form string="Transection Out Form View">
+                <form string="Transaction Out Form View">
                     <sheet>
                         <group>
                             <field name="sub_station" />
@@ -412,28 +412,28 @@
                 sequence="3"/>
 
 
-    <!-- Transection Main Manu -->
+    <!-- Transaction Main Manu -->
     <menuitem
-        id="transection_menu"
-        name="Transections"
+        id="transaction_menu"
+        name="Transactions"
         groups="base.group_user"
         parent="central_main_menu"
         sequence="2"/>
 
-            <!-- Transection Submenu In -->
+            <!-- Transaction Submenu In -->
             <menuitem
-                id="transection_in_menu"
-                name="Transection In"
-                action="transection_in_action"
-                parent="transection_menu"
+                id="transaction_in_menu"
+                name="Transaction In"
+                action="transaction_in_action"
+                parent="transaction_menu"
                 sequence="1"/>
 
-            <!-- Transection Submenu out -->
+            <!-- Transaction Submenu out -->
             <menuitem
-                id="transection_out_menu"
-                name="Transection Out"
-                action="transection_out_action"
-                parent="transection_menu"
+                id="transaction_out_menu"
+                name="Transaction Out"
+                action="transaction_out_action"
+                parent="transaction_menu"
                 sequence="2"/>
 
 
