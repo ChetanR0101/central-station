@@ -1,4 +1,3 @@
-from email.policy import default
 from xmlrpc.client import Boolean
 from odoo import models,fields,api
 from odoo.exceptions import ValidationError
@@ -10,16 +9,16 @@ class CentralStation_substation(models.Model):
     price=fields.Float("Fuel Price")
 
 
-class CentralStation_transection_in(models.Model):
-    _name= "central.transection_in"
+class CentralStation_transaction_in(models.Model):
+    _name= "central.transaction_in"
     name= fields.Char("Recived By")
     date= fields.Datetime("Date")
     fuel_type= fields.Many2one(string="Fuel Type", comodel_name="central.data")
     sub_station=fields.Many2one(string="SubStation Name", comodel_name="central.substation")
     instock_qut=fields.Float("InStock Qut")
 
-class CentralStation_transection_out(models.Model):
-    _name= "central.transection_out"
+class CentralStation_transaction_out(models.Model):
+    _name= "central.transaction_out"
     name=fields.Char("Customer Name")
     date=fields.Datetime("Date")
     fuel_type=fields.Many2one(string="Fuel Type", comodel_name="central.data")
